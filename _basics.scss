@@ -1,0 +1,155 @@
+/* ===========================
+   Base
+   =========================== */
+
+:root {
+	font-size: 20px;
+	font-size: clamp(16px, 1.25vw, 20px);
+	text-rendering: geometricPrecision;
+	scrollbar-gutter: stable;
+	text-underline-position: under;
+	@media (-webkit-device-pixel-ratio: 1.5) {
+		zoom: 0.66;
+	}
+	@media (-webkit-device-pixel-ratio: 1.25) {
+		zoom: 0.8;
+	}
+}
+
+h1, .heading-1,
+h2, .heading-2,
+h3, .heading-3,
+h4, .heading-4,
+h5, .heading-5 {
+	margin-top: 2em;
+	margin-bottom: 1em;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	& + h1, & + .heading-1,
+	& + h2, & + .heading-2,
+	& + h3, & + .heading-3,
+	& + h4, & + .heading-4,
+	& + h5, & + .heading-5 {
+		margin-top: 1em;
+	}
+}
+
+p, ul, ol {
+	margin-bottom: 1rem;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+ul, ol {
+	margin-bottom: 0;
+	padding-left: 1rem;
+	nav & {
+		padding-left: 0;
+		list-style: none;
+	}
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+img, svg, video {
+	max-width: 100%;
+	height: auto;
+}
+
+iframe {
+	max-width: 100%;
+	border: none;
+}
+
+figure {
+	font-size: 0;
+}
+
+figcaption {
+	margin-top: 1rem;
+	font-size: 1rem;
+}
+
+input,
+textarea,
+select,
+button {
+	border: none;
+	border-radius: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-weight: inherit;
+	background-color: transparent;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="password"],
+input[type="submit"],
+textarea,
+select,
+button {
+	appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-right: .25rem;
+}
+
+textarea {
+	resize: vertical;
+}
+
+::-webkit-input-placeholder {
+	color: currentColor;
+}
+::-moz-placeholder {
+	color: currentColor;
+}
+:-ms-input-placeholder {
+	color: currentColor;
+}
+:-moz-placeholder {
+	color: currentColor;
+}
+
+fieldset {
+	border: none;
+}
+
+button,
+input[type="submit"],
+.m-button {
+	cursor: pointer;
+	border: none;
+	appearance: none;
+}
+
+address {
+	font-style: normal;
+}
+
+summary {
+	list-style: none;
+	cursor: pointer;
+	&::-webkit-details-marker {
+		display: none;
+	}
+}

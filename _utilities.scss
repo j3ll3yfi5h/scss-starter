@@ -1,0 +1,44 @@
+/* ===========================
+   Utilities
+   =========================== */
+
+.u-grid {
+	display: grid;
+	gap: 1.25rem;
+	&--2 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		@media screen and (max-width: 840px) {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+	&--3 {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		@media screen and (max-width: 840px) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		@media screen and (max-width: 600px) {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+	&--4 {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		@media screen and (max-width: 840px) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		@media screen and (max-width: 600px) {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+}
+
+.u-limiter {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 10fr) minmax(0, 1fr);
+	grid-template-areas: ". content .";
+	@media screen and (max-width: 600px) {
+		grid-template-columns: minmax(0, .5fr) minmax(0, 11fr) minmax(0, .5fr);
+	}
+	&__inner {
+		grid-area: content;
+	}
+}

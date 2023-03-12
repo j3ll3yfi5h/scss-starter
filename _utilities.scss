@@ -1,10 +1,10 @@
-/* ===========================
-   Utilities
-   =========================== */
+/* =======================
+	Utilities
+	======================= */
 
 .u-grid {
 	display: grid;
-	gap: 1.25rem;
+	gap: 5rem 2.5rem;
 	&--2 {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		@media screen and (max-width: 840px) {
@@ -29,6 +29,14 @@
 			grid-template-columns: minmax(0, 1fr);
 		}
 	}
+	&__item {
+		&--2-3 {
+			grid-column: span 2;
+			@media screen and (max-width: 840px) {
+				grid-column: span 1;
+			}
+		}
+	}
 }
 
 .u-limiter {
@@ -41,4 +49,12 @@
 	&__inner {
 		grid-area: content;
 	}
+}
+
+.u-center {
+	text-align: center;
+}
+
+.u-text {
+	max-width: 80ch;
 }

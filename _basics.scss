@@ -1,6 +1,6 @@
-/* ===========================
-   Base
-   =========================== */
+/* =======================
+	Base
+	======================= */
 
 :root {
 	font-size: 20px;
@@ -9,13 +9,14 @@
 	scrollbar-gutter: stable;
 	text-underline-position: under;
 	@media (-webkit-device-pixel-ratio: 1.5) {
-		zoom: 0.66;
+		zoom: .66;
 	}
 	@media (-webkit-device-pixel-ratio: 1.25) {
-		zoom: 0.8;
+		zoom: .8;
 	}
 }
 
+// HEADINGS
 h1, .heading-1,
 h2, .heading-2,
 h3, .heading-3,
@@ -38,6 +39,7 @@ h5, .heading-5 {
 	}
 }
 
+// PARAGRAPHS, LISTS, TYPO
 p, ul, ol {
 	margin-bottom: 1rem;
 	&:last-child {
@@ -54,15 +56,20 @@ ul, ol {
 	}
 }
 
-a {
-	color: currentColor;
-	text-decoration: none;
-}
-
 strong, b {
 	font-weight: bold;
 }
 
+// LINKS
+a {
+	color: currentColor;
+	text-decoration: none;
+	nav & {
+
+	}
+}
+
+// MEDIA
 img, svg, video {
 	max-width: 100%;
 	height: auto;
@@ -82,6 +89,7 @@ figcaption {
 	font-size: 1rem;
 }
 
+// FORMS
 input,
 textarea,
 select,
@@ -142,14 +150,23 @@ input[type="submit"],
 	appearance: none;
 }
 
+// ADDRESS
 address {
 	font-style: normal;
 }
 
+// ACCORDION
 summary {
 	list-style: none;
 	cursor: pointer;
 	&::-webkit-details-marker {
 		display: none;
 	}
+}
+
+// HR
+hr {
+	border: none;
+	height: 1px;
+	background-color: currentColor;
 }
